@@ -1,0 +1,19 @@
+{
+  "name": "http-server",
+  "version": "1.0.0",
+  "description": "http-server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aufawibowo/grafkom-week-2.git"
+  },
+  "author": "aufawibowo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aufawibowo/grafkom-week-2/issues"
+  },
+  "homepage": "https://github.com/aufawibowo/grafkom-week-2#readme"
+}
