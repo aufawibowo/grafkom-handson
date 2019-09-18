@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Belajar WEB GL</title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belajar WebGL</title>
 </head>
 
 <body>
-    <canvas id="glcanvas" width="640" height="480">
-        Browser anda tidak mendukung HTML5 <code>&lt;canvas&gt;</code>.
-    </canvas>
-    <script type="text/javascript" src="libs/glUtils.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-</body>
+  
+  <canvas id="glcanvas" width="640" height="480">
+    Browser Anda tidak mendukung HTML5 <code>&lt;canvas&gt;</code>.
+  </canvas>
 
+  <!-- Shaders -->
+  <script name="shader" data-src="vertex.glsl" data-type="vertex" data-version="v1"></script>
+  <script name="shader" data-src="fragment.glsl" data-type="fragment" data-version="v1"></script>
+  
+  <!-- JavaScript pembantu pembaca file eksternal -->
+  <script type="text/javascript" src="libs/signals.js"></script>
+  
+  <!-- JavaScript penghubung ke WebGL -->
+  <script type="text/javascript" src="libs/glUtils.js"></script>
+  
+  <!-- JavaScript utama -->
+  <script type="text/javascript" src="index.js"></script>
+</body>
 </html>
