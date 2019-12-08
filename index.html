@@ -1,26 +1,31 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Animation Box on Three JS</title>
-    <meta http-equiv="content-type" content="text/html" charset="ISO-8859-1">
-
-    <script type="text/javascript" src="gl-matrix-min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-
-    <script id="shader-fs" type="x-shader/x-fragment">
-        precision mediump float; varying vec4 vColor; void main(void) { gl_FragColor = vColor; }
-    </script>
-
-    <script id="shader-vs" type="x-shader/x-vertex">
-        attribute vec3 aVertexPosition; attribute vec4 aVertexColor; uniform mat4 uMVMatrix; uniform mat4 uPMatrix; varying vec4 vColor; void main(void) { gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0); vColor = aVertexColor; }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kubus Terbuka - Huruf Bercahaya</title>
 </head>
+<body>
+  <canvas id="glcanvas" width="1350" height="600">
+    Browser Anda tidak mendukung HTML5 <code>&lt;canvas&gt;</code>.
+  </canvas>
 
-<body onload="webGLStart();" style="background-color: black;">
+  <!-- Shaders -->
+  <script name="shader" data-src="vertex.glsl" data-type="vertex" data-version="v1"></script>
+  <script name="shader" data-src="fragment.glsl" data-type="fragment" data-version="v1"></script>
+  <script name="shader" data-src="vertex2.glsl" data-type="vertex" data-version="v2"></script>
+  <script name="shader" data-src="fragment2.glsl" data-type="fragment" data-version="v2"></script>
 
-    <div align="center">
-        <canvas id="mycanvas" style="border: none" width="600" height="500"></canvas>
-    </div>
+  <!-- Library untuk men-dispatch methods -->
+  <script type="text/javascript" src="signals.js"></script>
+
+  <script type="text/javascript" src="gl-matrix-min.js"></script>
+
+  <!-- JavaScript untuk menghubungkan ke WebGL -->
+  <script type="text/javascript" src="glUtils.js"></script>
+
+  <!-- JavaScript utama kita -->
+  <script type="text/javascript" src="index.js"></script>
 </body>
-
 </html>
